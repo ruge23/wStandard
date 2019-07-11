@@ -1,0 +1,15 @@
+@import '../styles-variables';
+html, body{
+  height: 100%!important;
+}
+abe-header {
+  nav {
+    width: 100%;
+  }
+  
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    nav {
+      width: 80%;
+    }
+  }
+}

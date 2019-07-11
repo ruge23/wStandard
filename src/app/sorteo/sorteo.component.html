@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <header class="p-4 pl-5 pr-5">
+    <img src="assets/img/logo.svg" alt="">
+  </header>
+  <div class="container-fluid p-5 py-lg-5">
+    <div class="row">
+        <div class="col-md-7 py-5">
+            <h1>Ganate un casco J38 Red Tyler</h1>
+            <img src="assets/img/casco.png" alt="" class="img-fluid image-casco">
+        </div>
+        <div class="col-md-5">
+            <div class="form-box px-md-5 py-4 px-4 col-11">
+                <h2>Dejanos tus datos y participá del sorteo</h2>
+            <form name="form" (ngSubmit)="f.form.valid && sendSorteo()" #f="ngForm" novalidate>
+                <div class="form-group">
+                    <label for="firstName">Nombre y apellido</label>
+                    <input type="text" class="form-control" name="firstName" [(ngModel)]="model.nomApe" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                    <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                        <div *ngIf="firstName.errors.required">Nombre y apellido es obligatorio</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Mail</label>
+                    <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Mail es obligatorio</div>
+                        <!-- <div *ngIf="email.errors.email">Email must be a valid email address</div> -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Ciudad</label>
+                    <input type="text" class="form-control" name="lastName" [(ngModel)]="model.ciudad" #lastName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required />
+                    <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+                        <div *ngIf="lastName.errors.required">Ciudad es obligatorio</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Provincia</label>
+                    <input type="text" class="form-control" name="password" [(ngModel)]="model.provincia" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Provincia es obligatorio</div>
+                        <!-- <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div> -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="moto">Tu moto</label>
+                    <input type="text" class="form-control" name="moto" [(ngModel)]="model.moto" #moto="ngModel" />
+                    <!--<div *ngIf="f.submitted && moto.invalid" class="invalid-feedback">
+                        <div *ngIf="moto.errors.required">Tu moto es obligatorio</div>
+                         <div *ngIf="moto.errors.minlength">moto must be at least 6 characters</div> 
+                    </div>-->
+                </div>
+                <div class="form-group">
+                    <label for="productoMP">Producto que compraste por MercadoLibre</label>
+                    <input type="productoMP" class="form-control" name="productoMP" [(ngModel)]="model.productoMP" #productoMP="ngModel" [ngClass]="{ 'is-invalid': f.submitted && productoMP.invalid }" required minlength="6" />
+                    <div *ngIf="f.submitted && productoMP.invalid" class="invalid-feedback">
+                        <div *ngIf="productoMP.errors.required">Producto que compraste por MercadoLibre es obligatorio</div>
+                        <!-- <div *ngIf="productoMP.errors.minlength">productoMP must be at least 6 characters</div> -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btnenviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+</div>

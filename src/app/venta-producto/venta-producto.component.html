@@ -1,0 +1,70 @@
+<div id="wrapper-compra">
+    <header class="p-4">
+        <img src="../../assets/img/logo.svg" alt="">
+    </header>
+    <div class="container py-lg-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="py-3">Red Tyler j38</h1>
+                <div class="row mx-0">
+                  <div class="col-5 py-3 pl-0">
+                    <p>
+                        Precio<br>
+                        <strong>$4.080</strong>
+                    </p>
+                    <button class="btn btn-primary btn-block">COMPRAR</button>
+                  </div>
+                  <div class="col-7 py-3 pr-0">
+                      <p>
+                          Cantidad<br>
+                          <a href="">- </a>
+                          <strong>1</strong>
+                          <a href=""> +</a>
+                      </p>
+                      <button type="button" mdbBtn class="btn btn-primary btn-block">HACER CONSULTAS</button>
+                      <!-- <a href="" class="btn btn-primary btn-block">HACER CONSULTAS</a> -->
+                  </div>
+                </div>
+                <div class="py-3">
+                    <p>Colores del casco <br>
+                        <a href="" class="color-pick"></a>
+                        <a href="" class="color-pick"></a>
+                        <a href="" class="color-pick"></a>
+                    </p>
+                </div>
+                <div class="py-3">
+                    <p>
+                        Talle<br>
+                        <a href="">L</a> -
+                        <a href="">M</a> -
+                        <a href="">S</a>
+                    </p>
+                </div>
+                <div class="pt-3">
+                    <ul>
+                        <li>Tomas de aire frontal con ventilación posterior</li>
+                        <li>Interior removible y lavable</li>
+                        <li>Visor PC Anti Scratch & Anti FOG</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8 px-4">
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" *ngFor="let image of sliderImages;index as i;">
+                    <img [src]="image.img" class="d-block img-fluid">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+    </div>
+    
+</div>
