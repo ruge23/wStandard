@@ -14,7 +14,9 @@ export class SorteoComponent implements OnInit {
   model: any = {};
   constructor(private router: Router, private services: ServicesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("20190813");
+  }
 
   onSubmit(form: NgForm) {
     this.model = form.value;
@@ -24,7 +26,6 @@ export class SorteoComponent implements OnInit {
       this.model.email &&
       this.model.ciudad &&
       this.model.provincia &&
-      this.model.moto &&
       this.model.productoMP
     ) {
       this.services.sendSorteoData(this.model).subscribe(data => {
