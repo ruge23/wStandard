@@ -16,6 +16,8 @@ export class ServicesService {
     });
   }
 
+  codigo: string;
+
   sendSorteoData(data): Observable<any> {
     console.log("llego a la API", data);
 
@@ -41,5 +43,9 @@ export class ServicesService {
       headers: headers,
       withCredentials: true
     });
+  }
+
+  setCodigo(codigo) {
+    this.codigo = codigo;
   }
 }

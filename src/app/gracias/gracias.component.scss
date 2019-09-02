@@ -1,44 +1,79 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
-.wrapper{
-    background:#f5f5f6;
-    color: #404041;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+
+.wrapper {
+  background: #f5f5f6;
+  color: #404041;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
-header{
-    background:#fff;
-    img{
-        max-width: 215px;
-    }
+
+header {
+  background: #fff;
+  img {
+    max-width: 215px;
+  }
+}
+
+#gracias {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  background: #ffe326;
+  font-size: 1.5em !important;
+  height: 88vh;
 }
 
 .wrapper_gracias {
-    padding: 10rem !important;
-}
-#gracias {
-    background: #ffe326;
-    font-size: 1.5em !important;
-    height: 88vh;
-}
-h1.title_gracias{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 10rem !important;
+
+  .title_gracias {
     padding-bottom: 4rem;
-}
-#gracias h1 {
-    display: block;
     font-weight: 800;
     font-size: 3rem;
-}
-#gracias p {
+  }
+
+  .bajada {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+  }
+
+  .codigo {
+    display: table;
+    border: 1px solid grey;
+    background: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 2rem;
     display: block;
-    font-weight: 200;
-    font-size: 1em;
+    width: 30%;
+  }
 }
-  
-@media (max-width: 767px) {
-    .wrapper_gracias {
-        padding: 2rem !important;
+
+@media (max-width: 1152px) {
+  .wrapper_gracias {
+    padding: 2rem !important;
+
+    .title_gracias {
+      padding-bottom: 1rem;
     }
-    h1.title_gracias {
-        padding-bottom: 2rem;
-    }   
+    .codigo {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  #gracias {
+    height: 100vh;
+  }
+  .wrapper_gracias {
+    .bajada {
+      font-size: 1.4rem;
+    }
+  }
 }

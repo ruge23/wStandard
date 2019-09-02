@@ -16,6 +16,7 @@ export class SorteoComponent implements OnInit {
 
   ngOnInit() {
     console.log("20190813");
+    console.log("20190902");
   }
 
   onSubmit(form: NgForm) {
@@ -29,14 +30,13 @@ export class SorteoComponent implements OnInit {
       this.model.productoMP
     ) {
       this.services.sendSorteoData(this.model).subscribe(data => {
-        console.log("vuelta", data);
-        this.data = JSON.parse(data["_body"])["data"];
-        console.log("data", this.data);
+        // let x = JSON.parse(data["_body"])["data"];
 
-        if (this.data) {
-          console.log("entroAlIf");
+        let codigo = JSON.parse(data["_body"])["data"];
 
-          this.router.navigate(["/", "a"]).then(
+        if (codigo) {
+          this.services.setCodigo(codigo.trim());
+          this.router.navigate(["/", "gracias"]).then(
             nav => {
               console.log(nav); // true if navigation is successful
             },
@@ -44,6 +44,8 @@ export class SorteoComponent implements OnInit {
               console.log(err); // when there's an error
             }
           );
+        } else {
+          alert("El mail ingresado ya tiene un código de descuento asignado");
         }
       });
     }
