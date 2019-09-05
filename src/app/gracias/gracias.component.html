@@ -3,19 +3,68 @@
     <img src="assets/img/logo.svg" alt="">
   </header>
 
-  <div id="gracias">
+  <section id="gracias">
+
     <div class="container-fluid wrapper_gracias">
 
-      <h1 class="title_gracias">¡Muchas gracias!</h1>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title_gracias">Muchas gracias!</h1>
+        </div>
+      </div>
 
-      <h2 class="bajada">Con el siguiente código, que también enviamos a tu mail, podrás obtener un descuento especial
-        en nuestros productos de Mercadolibre:</h2>
+      <div class="row">
+        <div class="col-12">
+          <h2 class="bajada">Con el siguiente código, que también enviamos a tu mail, podrás obtener el 10% de descuento
+            en cualquier compra que realices en nuestras tiendas oficiales de Mercado Libre
+          </h2>
+        </div>
+      </div>
 
-      <p class="codigo">{{ codigo }}</p>
-      <!-- <p class="codigo">WS015</p> -->
+      <div class="row">
+        <div class="col-12">
+          <span class="codigo">
+            <!-- <p>{{ codigo }}</p> -->
+            <p class="codigo">WS015</p>
+          </span>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <h2 class="bajada">Ya podés usarlo a partir de este momento en cualquiera de nuestras tiendas oficiales
+          </h2>
+        </div>
+      </div>
+
+      <div class="row logos">
+        <div class="col-md-3 col-lg-3">
+          <span>
+            <img src="assets/logos/logo-ws.png" alt="">
+            <button (click)="goToWs()" class="btn-acceder">ACCEDER</button>
+          </span>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <span>
+            <img src="assets/logos/logo-j.png" alt="">
+            <button (click)="goToJust()" class="btn-acceder">ACCEDER</button>
+          </span>
+        </div>
+
+        <div class="col-md-3 col-lg-3">
+          <span>
+            <img src="assets/logos/logo-on.png" alt="">
+            <button (click)="goToGuard()" class="btn-acceder">ACCEDER</button>
+          </span>
+        </div>
+
+      </div>
+
 
     </div>
-  </div>
+  </section>
 
 
 </div>

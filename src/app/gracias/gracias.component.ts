@@ -14,4 +14,16 @@ export class GraciasComponent implements OnInit {
   ngOnInit() {
     this.codigo = this.services.codigo;
   }
+
+  goToWs() {
+    window.open("http://wstandard.com.ar/");
+  }
+
+  goToJust() {
+    window.open("https://www.just1.com.ar");
+  }
+
+  goToGuard() {
+    window.open("http://www.onguardlock.com");
+  }
 }

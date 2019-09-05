@@ -1,0 +1,57 @@
+.btnenviar {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.41);
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-light {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  box-shadow: 3px 5px 14px rgba(0, 0, 0, 0.41);
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-acceder {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.41);
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-light:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+.btn-light:focus,
+.btn-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+  color: #212529;
+  background-color: #dae0e5;
+  border-color: #d3d9df;
+}
+
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.show > .btn-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}

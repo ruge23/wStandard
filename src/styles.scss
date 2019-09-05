@@ -2,8 +2,16 @@
 @import "styles-variables";
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap');
+@import "./app/partials/_buttons";
 
-body{
-    font-family: 'Roboto', sans-serif;
+@font-face {
+  font-family: 'Trebuchet';
+  font-style: normal;
+  src: local('Trebuchet'), url("./assets/fonts/trebuc.woff") format('woff');
+}
+
+*,
+body,
+html {
+  font-family: 'Trebuchet';
 }

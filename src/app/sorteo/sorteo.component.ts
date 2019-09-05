@@ -9,10 +9,11 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./sorteo.component.scss"]
 })
 export class SorteoComponent implements OnInit {
-  data: any = [];
-
-  model: any = {};
   constructor(private router: Router, private services: ServicesService) {}
+
+  data: any = [];
+  enviando: boolean = false;
+  model: any = {};
 
   ngOnInit() {
     console.log("20190813");
@@ -29,6 +30,7 @@ export class SorteoComponent implements OnInit {
       this.model.provincia &&
       this.model.productoMP
     ) {
+      this.enviando = !this.enviando;
       this.services.sendSorteoData(this.model).subscribe(data => {
         // let x = JSON.parse(data["_body"])["data"];
 
@@ -46,6 +48,7 @@ export class SorteoComponent implements OnInit {
           );
         } else {
           alert("El mail ingresado ya tiene un código de descuento asignado");
+          this.enviando = false;
         }
       });
     }
