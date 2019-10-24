@@ -5,15 +5,16 @@
   color: #404041;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 .container-fluid {
-  background-color: #f9e02b;
-  background-image: url('../../assets/img/background.jpeg');
+  background-color: white;
+  background-image: url('../../assets/img/background.jpg');
   background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
-  // max-height: 95vh;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 // .py-lg-5 {
@@ -237,5 +238,11 @@ header {
       left: 0%;
       top: 0vh;
     }
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-fluid {
+    background-size: contain;
   }
 }

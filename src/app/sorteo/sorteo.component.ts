@@ -16,6 +16,7 @@ export class SorteoComponent implements OnInit {
   model: any = {};
 
   ngOnInit() {
+    console.log("20191009");
     console.log("20190813");
     console.log("20190902");
   }
@@ -35,6 +36,10 @@ export class SorteoComponent implements OnInit {
         // let x = JSON.parse(data["_body"])["data"];
 
         let codigo = JSON.parse(data["_body"])["data"];
+
+        console.log("1", codigo);
+        console.log("2", data);
+        console.log("3", data["_body"]);
 
         if (codigo) {
           this.services.setCodigo(codigo.trim());
