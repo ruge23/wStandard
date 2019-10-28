@@ -5,16 +5,16 @@
   color: #404041;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .container-fluid {
   background-color: white;
-  background-image: url('../../assets/img/background.jpg');
+  background-image: url('../../assets/img/bg_solo_gde.jpg');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  //height: 100vh;
 }
 
 // .py-lg-5 {
@@ -26,8 +26,6 @@
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  // margin-right: -15px;
-  // margin-left: -15px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -44,10 +42,18 @@
   }
 }
 
-// .py-5 {
-//   padding-top: 3rem !important;
-//   padding-bottom: 3rem !important;
-// }
+.descuento {
+  img {
+    width: 100vh;
+  }
+}
+
+.logos {
+  .logo-footer {
+    width: 23vh;
+  }
+}
+
 
 .form-box {
   h2 {
@@ -184,7 +190,54 @@ header {
   display: none;
 }
 
+.col-izq-datos {
+  padding: 0;
+}
+
 // ---------- RESPONSIVE
+
+@media (max-width: 1366px) {
+  .descuento {
+    img {
+      width: 100%;
+    }
+  }
+
+  .logos {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .descuento {
+    img {
+      width: 37vh;
+    }
+  }
+
+  .logos {
+    .logo-footer {
+      width: 10vh;
+    }
+  }
+
+  .form-box {
+    h2 {
+      font-size: 1.5em;
+      line-height: 23px;
+      max-width: 100%;
+    }
+
+    label {
+      margin-bottom: .3rem;
+    }
+
+    .form-control {
+      height: 30px;
+    }
+  }
+
+}
 
 @media (max-width: 767px) {
   .form-box {
@@ -194,6 +247,9 @@ header {
       line-height: 23px;
     }
   }
+
+
+
 }
 
 @media (max-width: 767px) {
@@ -205,6 +261,10 @@ header {
 
   .p-5 {
     padding: 1rem !important;
+  }
+
+  .col-izq-datos {
+    display: none!important;
   }
 
   .img-media {
@@ -243,6 +303,12 @@ header {
 
 @media (min-width: 1920px) {
   .container-fluid {
-    background-size: contain;
+    background-size: cover;
+  }
+
+  .descuento {
+    img {
+      width: 80vh;
+    }
   }
 }
